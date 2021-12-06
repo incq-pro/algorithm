@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-const m = 1337
+const _M = 1337
 
 func superPow(a int, b []int) int {
-	if a > m {
-		a = a % m
+	if a > _M {
+		a = a % _M
 	}
 	if a == 0 || a == 1 {
 		return a
@@ -16,9 +16,9 @@ func superPow(a int, b []int) int {
 	}
 	c, r := divideSlice(b, 2)
 	if r != 0 {
-		return (superPow(a*a, c) * a) % m
+		return (superPow(a*a, c) * a) % _M
 	} else {
-		return superPow(a*a, c) % m
+		return superPow(a*a, c) % _M
 	}
 }
 

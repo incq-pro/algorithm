@@ -54,6 +54,10 @@ func TestBubbleSort(t *testing.T) {
 			"three",
 			[]int{3, 2, 1},
 		},
+		{
+			"sorted",
+			[]int{6, 7, 8, 9},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
